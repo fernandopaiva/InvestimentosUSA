@@ -244,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagens\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
