@@ -16,6 +16,18 @@ namespace InvestimentosUSA
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //customizacoes
+            HtmlHelper.ClientValidationEnabled = true;
+            HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+            ModelBinders.Binders.Add(typeof(double), new DoubleModelBinder());
+            ModelBinders.Binders.Add(typeof(double?), new DoubleModelBinder());
+            ModelBinders.Binders.Add(typeof(int), new Int32ModelBinder());
+            ModelBinders.Binders.Add(typeof(int?), new Int32ModelBinder());
+            ModelBinders.Binders.Add(typeof(decimal), new DecimalModelBinder());
+            ModelBinders.Binders.Add(typeof(decimal?), new DecimalModelBinder());
+            ModelBinders.Binders.Add(typeof(long), new LongModelBinder());
+            ModelBinders.Binders.Add(typeof(long?), new LongModelBinder());     
         }
     }
 }
